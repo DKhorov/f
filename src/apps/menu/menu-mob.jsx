@@ -32,8 +32,7 @@ import {
   BsFillHeartFill,
 } from 'react-icons/bs';
 import WalletModal from '../wallet/wallet';
-import { SmartToy as AIIcon } from '@mui/icons-material';
-import AIChatModal from '../../../components/AIChatModal';
+
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -56,7 +55,6 @@ export const Mobile = () => {
   const [favoritePosts, setFavoritePosts] = useState([]);
   const [modalLoading, setModalLoading] = useState(false);
   const [walletOpen, setWalletOpen] = useState(false);
-  const [aiChatOpen, setAIChatOpen] = useState(false);
 
   useEffect(() => {
     dispatch(fetchUser());
@@ -135,9 +133,6 @@ export const Mobile = () => {
       </Link>
       <span className="menu-icon-z" onClick={() => setWalletOpen(true)} style={{cursor: 'pointer'}}>
         <FaWallet />
-      </span>
-      <span className="menu-icon-z" onClick={() => setAIChatOpen(true)} style={{cursor: 'pointer'}}>
-        <AIIcon />
       </span>
 
       <BsFillHeartFill 
@@ -274,7 +269,6 @@ export const Mobile = () => {
         </Box>
       </StyledModal>
       <WalletModal open={walletOpen} onClose={() => setWalletOpen(false)} />
-      <AIChatModal open={aiChatOpen} onClose={() => setAIChatOpen(false)} />
     </div>
     </div>
   );
