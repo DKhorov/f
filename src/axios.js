@@ -3,7 +3,7 @@ import axios from "axios";
 // Определяем базовый URL в зависимости от окружения
 const getBaseURL = () => {
   // Возвращаем URL для API
-  return process.env.REACT_APP_API_URL || 'https://atomglide.ru';
+  return process.env.REACT_APP_API_URL || 'https://atomglidedev.ru';
 };
 
 // Основной axios для авторизации и общих запросов
