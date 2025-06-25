@@ -1,0 +1,30 @@
+/* AtomGlide -- DK Stduio Product -- Author Dmitry Khorov ( git DKhorov tg @jpegweb */
+
+.mobile-menu{
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 10px;
+    height: 70px;
+    border-radius: 100px;
+    z-index: 10000;
+    border: 1px solid #fff;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mob-ce{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.menu-icon-z {
+    font-size: 20px;
+    color: #fff;
+    flex-shrink: 0;
+}

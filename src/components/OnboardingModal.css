@@ -1,0 +1,106 @@
+/* OnboardingModal.css */
+.onboarding-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 30, 30, 0.45);
+  backdrop-filter: blur(16px) saturate(160%);
+  z-index: 4000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.onboarding-modal-window {
+  background: rgba(255,255,255,0.98);
+  color: #23232b;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 40px 32px 32px 32px;
+  min-width: 320px;
+  max-width: 380px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  animation: fadeIn 0.3s;
+}
+.onboarding-modal-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.onboarding-modal-text {
+  font-size: 1.08rem;
+  margin-bottom: 24px;
+  text-align: center;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.onboarding-modal-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.onboarding-btn {
+  background: #e0e0e0;
+  color: #23232b;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.onboarding-btn.primary {
+  background: #6ab3f7;
+  color: #23232b;
+}
+.onboarding-btn.primary:hover {
+  background: #4e9ed6;
+  color: #fff;
+}
+.onboarding-btn:hover {
+  background: #b0b0b0;
+}
+.onboarding-modal-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+.onboarding-modal-dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #b0b0b0;
+  transition: background 0.18s;
+}
+.onboarding-modal-dots span.active {
+  background: #6ab3f7;
+}
+@media (max-width: 600px) {
+  .onboarding-modal-window {
+    min-width: 0;
+    width: 98vw;
+    padding: 24px 6vw 24px 6vw;
+    border-radius: 0;
+  }
+  .onboarding-modal-title {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+} 
