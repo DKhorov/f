@@ -33,8 +33,7 @@ import {
 } from 'react-icons/bs';
 import WalletModal from '../wallet/wallet';
 import { SmartToy as AIIcon } from '@mui/icons-material';
-import AIChatModal from '../components/AIChatModal';
-
+import AIChatModal from '../../../components/AIChatModal';
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
